@@ -15,6 +15,8 @@ import { AboutUsComponent } from './components/pages/about-us/about-us.component
 import { OneColumnTemplateComponent } from './components/pages/one-column-template/one-column-template.component';
 import { TwoColumnTemplateSideRailComponent } from './components/pages/two-column-template-side-rail/two-column-template-side-rail.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { AccordionComponent } from './components/pages/accordion/accordion.component';
+
 
 @NgModule({
   declarations: [
@@ -27,7 +29,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     PageNotFoundComponent,
     AboutUsComponent,
     OneColumnTemplateComponent,
-    TwoColumnTemplateSideRailComponent
+    TwoColumnTemplateSideRailComponent,
+    AccordionComponent,
   ],
   imports: [
     BrowserModule,
