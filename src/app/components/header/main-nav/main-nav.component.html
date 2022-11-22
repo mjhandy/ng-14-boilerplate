@@ -1,0 +1,27 @@
+<nav class="navbar navbar-expand-lg bg-light">
+  <div class="container-fluid">
+    <app-site-logo></app-site-logo>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavBar" aria-controls="mainNavBar" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="mainNavBar">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="about-us" routerLinkActive="active" ariaCurrentWhenActive="page">About Us</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Page Templates
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" routerLink="one-column" routerLinkActive="active" ariaCurrentWhenActive="page">One Column</a></li>
+            <li><a class="dropdown-item" routerLink="two-column" routerLinkActive="active" ariaCurrentWhenActive="page">Two Column Right Rail</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li>
+      </ul>
+      <app-global-search *ngIf=""></app-global-search>
+    </div>
+  </div>
+</nav>
