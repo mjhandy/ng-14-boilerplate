@@ -14,6 +14,7 @@ import { PageNotFoundComponent } from './components/pages/page-not-found/page-no
 import { AboutUsComponent } from './components/pages/about-us/about-us.component';
 import { OneColumnTemplateComponent } from './components/pages/one-column-template/one-column-template.component';
 import { TwoColumnTemplateSideRailComponent } from './components/pages/two-column-template-side-rail/two-column-template-side-rail.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { TwoColumnTemplateSideRailComponent } from './components/pages/two-colum
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgbModule
   ],
   providers: [Meta],
   bootstrap: [AppComponent]
