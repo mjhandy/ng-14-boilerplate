@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AbstractControl, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-form',
@@ -7,11 +7,12 @@ import { AbstractControl, FormBuilder, FormControl, FormGroup, Validators } from
   styleUrls: ['./form.component.scss']
 })
 export class FormComponent implements OnInit {
-  form: FormGroup = new FormGroup({
-    fName: new FormControl(''),
-    lName: new FormControl(''),
+  userForm = new FormGroup({
+    fName: new FormControl(),
+    lName: new FormControl()
   });
   submitted = false;
+  namePattern = '[a-zA-Z]+'
   
 
   constructor(
@@ -19,26 +20,29 @@ export class FormComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.form = this.formBuilder.group({
-      fName: ['', Validators.required],
+    this.userForm = this.formBuilder.group({
+      fName: ['',
+        Validators.required,],
       lName: ['', Validators.required]
     })
   }
 
-  get f(): { [key:string]: AbstractControl }{
-    return this.form.controls;
-  }
+  get getControl(){
+    return this.userForm.controls;
+  }  
 
   onSubmit(): void{
     this.submitted = true;
 
-    if (this.form.invalid) {
+    if (this.userForm.invalid) {
       return;
     }
 
-    console.log(JSON.stringify(this.form.value, null, 2));
+    console.log(JSON.stringify(this.userForm.value, null, 2));
   }
 
 
 
 }
+
+

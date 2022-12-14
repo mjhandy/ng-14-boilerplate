@@ -3,7 +3,7 @@
     <div class="col-12 col-lg-6">
       <h1>Forms</h1>
       <h2>Text Fields</h2>
-      <form [formGroup]="form" (ngSubmit)="onSubmit()" class="form" >
+      <form [formGroup]="userForm" (ngSubmit)="onSubmit()" class="form" >
         <fieldset>
           <legend>Text Input Fields</legend>
           <div class="form-floating">
@@ -11,28 +11,32 @@
               type="text" 
               formControlName="fName"
               class="form-control"
-              [ngClass]="{ 'is-invalid': submitted && f['fName'].errors}"
+              [ngClass]="{ 'is-invalid': submitted && getControl.fName.errors}"
               placeholder="First Name" 
+              [pattern]="namePattern"
               required>
             <label for="fName">First Name <span class="required">*</span></label>
             <div class="form-error mb-3 text-danger" aria-live="polite">
-              <ng-template [ngIf]="submitted && f['fName'].errors">
-                <ng-template [ngIf]="f['fName'].errors['required']">First Name is required</ng-template>
+              <ng-template [ngIf]="submitted && getControl.fName.errors">
+                <ng-template [ngIf]="getControl['fName'].errors['required'] ">First Name is required</ng-template>
+                <ng-template [ngIf]="getControl['fName'].errors['pattern'] ">First Name is not valid. Try again</ng-template>
               </ng-template>
             </div>     
           </div>
           <div class="form-floating mb-3">
             <input 
-              type="text" 
+              type="text"
+              formControlName="lName" 
               class="form-control" 
-              [ngClass]="{ 'is-invalid': submitted && f['lName'].errors}"
+              [ngClass]="{ 'is-invalid': submitted && getControl.lName.errors}"
               id="lName" 
-              placeholder="Last Name" 
-              required formControlName="lName">
+              placeholder="Last Name"
+              [pattern]="namePattern" 
+              required >
             <label for="lName">Last Name <span class="required">*</span></label>
             <div class="form-error mb-3 text-danger" aria-live="polite">
-              <ng-template [ngIf]="submitted && f['lName'].errors">
-                <ng-template [ngIf]="f['lName'].errors['required']">Last Name is required</ng-template>
+              <ng-template [ngIf]="submitted && getControl.lName.errors">
+                <ng-template [ngIf]="getControl['lName'].errors">Last Name is required</ng-template>                
               </ng-template>
             </div>           
           </div>

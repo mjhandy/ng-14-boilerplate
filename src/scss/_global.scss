@@ -18,3 +18,7 @@
   outline-style: dashed;
   outline-width: 2px; 
 }
+
+.btn{
+  @include box_shadow (1, 3, 300);
+}
