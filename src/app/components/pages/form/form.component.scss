@@ -1,0 +1,12 @@
+// required scss includes
+@import 'componentIncludes';
+
+
+.form{
+  &-error{
+    height: 20px;    
+  }
+  .required{
+    color: $red;
+  }
+}

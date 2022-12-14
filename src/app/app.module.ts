@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule, Meta } from '@angular/platform-browser';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -37,6 +38,7 @@ import { FormComponent } from './components/pages/form/form.component';
     BrowserModule,
     AppRoutingModule,
     NgbModule,
+    ReactiveFormsModule
   ],
   providers: [Meta],
   bootstrap: [AppComponent]

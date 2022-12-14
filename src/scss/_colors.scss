@@ -1,0 +1,22 @@
+/// 
+/// Boostrap Overrides
+/// 
+/// @author Mark Handy
+/// @name Custom Colours
+/// @group variables
+
+
+$black: #000;
+
+$white: #fff;
+$blue: #1057A2;
+$red: #B50018;
+$silver: #cdcdcd;
+$grey :#767676;
+$platinum: #E5E4E2;
+/// Default colour for borders
+$borderColour: lighten($grey, 10);
+/// custom theme colours
+$primary: $blue;
+$danger: $red;
+$error: $red;

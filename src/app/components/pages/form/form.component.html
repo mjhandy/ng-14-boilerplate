@@ -3,22 +3,41 @@
     <div class="col-12 col-lg-6">
       <h1>Forms</h1>
       <h2>Text Fields</h2>
-      <form class="needs-validation">
+      <form [formGroup]="form" (ngSubmit)="onSubmit()" class="form" >
         <fieldset>
           <legend>Text Input Fields</legend>
-          <div class="form-floating mb-3">
-            <input type="text" class="form-control" id="fName" placeholder="First Name" required formControlName="fName">
-            <label for="fName">First Name</label>
-            <div class="form-error" aria-live="polite">
-
+          <div class="form-floating">
+            <input 
+              type="text" 
+              formControlName="fName"
+              class="form-control"
+              [ngClass]="{ 'is-invalid': submitted && f['fName'].errors}"
+              placeholder="First Name" 
+              required>
+            <label for="fName">First Name <span class="required">*</span></label>
+            <div class="form-error mb-3 text-danger" aria-live="polite">
+              <ng-template [ngIf]="submitted && f['fName'].errors">
+                <ng-template [ngIf]="f['fName'].errors['required']">First Name is required</ng-template>
+              </ng-template>
             </div>     
           </div>
           <div class="form-floating mb-3">
-            <input type="text" class="form-control" id="lName" placeholder="Last Name" required formControlName="lName">
-            <label for="lName">Last Name</label>          
+            <input 
+              type="text" 
+              class="form-control" 
+              [ngClass]="{ 'is-invalid': submitted && f['lName'].errors}"
+              id="lName" 
+              placeholder="Last Name" 
+              required formControlName="lName">
+            <label for="lName">Last Name <span class="required">*</span></label>
+            <div class="form-error mb-3 text-danger" aria-live="polite">
+              <ng-template [ngIf]="submitted && f['lName'].errors">
+                <ng-template [ngIf]="f['lName'].errors['required']">Last Name is required</ng-template>
+              </ng-template>
+            </div>           
           </div>
           <div>
-            <button class="btn btn-primary" type="submit" (click)="nameInputSubmit()">Submit</button>
+            <button class="btn btn-primary" type="submit" >Submit</button>
           </div>        
         </fieldset>
       </form>

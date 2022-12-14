@@ -6,22 +6,6 @@
 /// @group variables
 
 
-
-$black: #000;
-
-$white: #fff;
-$blue: #1057A2;
-$red: red;
-$silver: #cdcdcd;
-$grey :#767676;
-$platinum: #E5E4E2;
-/// Default colour for borders
-$borderColour: lighten($grey, 10);
-/// custom theme colours
-$primary: $blue;
-$danger: $red;
-
-
 /// Grid breakpoints Updates
 /// @type Breakpoint
 $grid-breakpoints: (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px, xxl: 1440px, xxxl: 1600px);
