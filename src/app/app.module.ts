@@ -16,7 +16,7 @@ import { OneColumnTemplateComponent } from './components/pages/one-column-templa
 import { TwoColumnTemplateSideRailComponent } from './components/pages/two-column-template-side-rail/two-column-template-side-rail.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AccordionComponent } from './components/pages/accordion/accordion.component';
-
+import { FormComponent } from './components/pages/form/form.component';
 
 @NgModule({
   declarations: [
@@ -31,11 +31,12 @@ import { AccordionComponent } from './components/pages/accordion/accordion.compo
     OneColumnTemplateComponent,
     TwoColumnTemplateSideRailComponent,
     AccordionComponent,
+    FormComponent,    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
   ],
   providers: [Meta],
   bootstrap: [AppComponent]

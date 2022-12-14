@@ -17,6 +17,10 @@ $grey :#767676;
 $platinum: #E5E4E2;
 /// Default colour for borders
 $borderColour: lighten($grey, 10);
+/// custom theme colours
+$primary: $blue;
+$danger: $red;
+
 
 /// Grid breakpoints Updates
 /// @type Breakpoint
@@ -59,5 +63,6 @@ $sizes: map-merge((25: 25%,
 // $font-size-base: 1rem;
 $font-family-sans-serif: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 $line-height-base: 1.5;
+
 
 /* custom variable values:END */

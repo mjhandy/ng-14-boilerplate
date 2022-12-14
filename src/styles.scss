@@ -5,9 +5,6 @@
 /* Bootstrap Overrides */
 @import 'bootstrapOverrides';
 
-/* Importing Bootstrap SCSS file from node modules. */
-// @import 'bootstrap';
-
 /* Bootstrap include */ 
 @import 'bootStrapIncludes';
 
@@ -20,6 +17,3 @@
 // Global items
 @import 'global';
 
-
-/* Importing Bootstrap SCSS file. */
-// @import '~bootstrap/scss/bootstrap';
