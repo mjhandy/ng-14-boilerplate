@@ -2,11 +2,12 @@
 
 
 /* You can add global styles to this file, and also import other style files */
-/* Bootstrap Overrides */
-@import 'bootstrapOverrides';
 
 // custom colors
 @import 'colors';
+
+/* Bootstrap Overrides */
+@import 'bootstrapOverrides';
 
 /* Bootstrap include */ 
 @import 'bootStrapIncludes';

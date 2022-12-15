@@ -4,7 +4,8 @@
 
 .form{
   &-error{
-    height: 20px;    
+    height: 20px;
+    @include font-size(14px, 1.2, 400);
   }
   .required{
     color: $red;

@@ -48,5 +48,14 @@ $sizes: map-merge((25: 25%,
 $font-family-sans-serif: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 $line-height-base: 1.5;
 
+// form items
+$input-padding-y: 5px;
+$input-padding-x: 10px;
+$input-border-color: $borderColour;
+$form-floating-padding-y: 15px; 
+$form-floating-padding-x: 10px;
+$input-box-shadow: none;
+$input-focus-box-shadow: none;
+$input-focus-border-color: $primary;
 
 /* custom variable values:END */

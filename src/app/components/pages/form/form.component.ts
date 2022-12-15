@@ -8,8 +8,9 @@ import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
 })
 export class FormComponent implements OnInit {
   submitted = false;
-  namePattern = '[a-zA-Z]+';
+  namePattern = '[a-zA-Z]';
   emailPattern = '^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$';
+  passwordPattern = '^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$ %^&*-]).{8,}$';
   userForm = new FormGroup({
     fName: new FormControl('',[
       Validators.required,
@@ -22,6 +23,11 @@ export class FormComponent implements OnInit {
     email: new FormControl('',[
       Validators.required,
       Validators.pattern(this.emailPattern),
+    ]),
+    pWord: new FormControl('',[
+      Validators.required,
+      Validators.minLength(8),
+      Validators.pattern(this.passwordPattern)
     ])
   });
 

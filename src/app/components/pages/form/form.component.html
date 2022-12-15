@@ -1,11 +1,10 @@
 <div class="container">
   <div class="row justify-content-center">
     <div class="col-12 col-lg-6">
-      <h1>Forms</h1>
-      <h2>Text Fields</h2>
+      <h1>Form Fields</h1>
       <form [formGroup]="userForm" (ngSubmit)="onSubmit()" class="form" >
         <fieldset>
-          <legend>Text Input Fields</legend>
+          <legend>Name and Email</legend>
           <div class="form-floating">
             <input 
               type="text" 
@@ -56,9 +55,48 @@
                 </ng-template>
               </div>               
           </div>
+        
+        </fieldset>
+        <fieldset>
+          <legend>Password </legend>
+          <div class="form-floating">
+            <input 
+              type="text" 
+              formControlName="pWord"
+              class="form-control"
+              [ngClass]="{ 'is-invalid': submitted && getControl.pWord.errors}"
+              placeholder="Password" 
+              required>
+            <label for="pWord">Password <span class="required">*</span></label>
+            <div class="form-error mb-3 text-danger" aria-live="polite">
+              <ng-template [ngIf]="submitted && getControl.pWord.errors">
+                <ng-template [ngIf]="getControl['pWord'].errors['required'] ">Password is required.</ng-template>
+                <ng-template [ngIf]="getControl['pWord'].errors['pattern'] ">Minimum eight characters, at least one upper case, one lower case letter, one number and one special character</ng-template>
+              </ng-template>
+            </div>  
+          </div>
+          <div class="form-floating">
+            <input 
+              type="text" 
+              formControlName="pWordMatch"
+              class="form-control"
+              [ngClass]="{ 'is-invalid': submitted && getControl.pWord.errors}"
+              placeholder="Confirm Password" 
+              required>
+            <label for="pWord">Confirm Password <span class="required">*</span></label>
+            <div class="form-error mb-3 text-danger" aria-live="polite">
+              <ng-template [ngIf]="submitted && getControl.pWord.errors">
+                <ng-template [ngIf]="getControl['pWord'].errors['required'] ">Password is required.</ng-template>
+                <ng-template [ngIf]="getControl['pWord'].errors['pattern'] ">Minimum eight characters, at least one upper case, one lower case letter, one number and one special character</ng-template>
+              </ng-template>
+            </div>  
+          </div>          
+        </fieldset>
+        <fieldset>
+          <legend>Form Controls</legend>
           <div>
             <button class="btn btn-primary" type="submit" >Submit</button>
-          </div>        
+          </div>          
         </fieldset>
       </form>
     </div>   
