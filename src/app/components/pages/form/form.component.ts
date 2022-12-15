@@ -7,12 +7,24 @@ import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
   styleUrls: ['./form.component.scss']
 })
 export class FormComponent implements OnInit {
-  userForm = new FormGroup({
-    fName: new FormControl(),
-    lName: new FormControl()
-  });
   submitted = false;
-  namePattern = '[a-zA-Z]+'
+  namePattern = '[a-zA-Z]+';
+  emailPattern = '^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$';
+  userForm = new FormGroup({
+    fName: new FormControl('',[
+      Validators.required,
+      Validators.pattern(this.namePattern),
+    ]),
+    lName: new FormControl('',[
+      Validators.required,
+      Validators.pattern(this.namePattern),
+    ]),
+    email: new FormControl('',[
+      Validators.required,
+      Validators.pattern(this.emailPattern),
+    ])
+  });
+
   
 
   constructor(
@@ -20,11 +32,7 @@ export class FormComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.userForm = this.formBuilder.group({
-      fName: ['',
-        Validators.required,],
-      lName: ['', Validators.required]
-    })
+
   }
 
   get getControl(){

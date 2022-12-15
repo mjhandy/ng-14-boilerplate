@@ -13,12 +13,11 @@
               class="form-control"
               [ngClass]="{ 'is-invalid': submitted && getControl.fName.errors}"
               placeholder="First Name" 
-              [pattern]="namePattern"
               required>
             <label for="fName">First Name <span class="required">*</span></label>
             <div class="form-error mb-3 text-danger" aria-live="polite">
               <ng-template [ngIf]="submitted && getControl.fName.errors">
-                <ng-template [ngIf]="getControl['fName'].errors['required'] ">First Name is required</ng-template>
+                <ng-template [ngIf]="getControl['fName'].errors['required'] ">First Name is required.</ng-template>
                 <ng-template [ngIf]="getControl['fName'].errors['pattern'] ">First Name is not valid. Try again</ng-template>
               </ng-template>
             </div>     
@@ -31,14 +30,31 @@
               [ngClass]="{ 'is-invalid': submitted && getControl.lName.errors}"
               id="lName" 
               placeholder="Last Name"
-              [pattern]="namePattern" 
               required >
             <label for="lName">Last Name <span class="required">*</span></label>
             <div class="form-error mb-3 text-danger" aria-live="polite">
               <ng-template [ngIf]="submitted && getControl.lName.errors">
-                <ng-template [ngIf]="getControl['lName'].errors">Last Name is required</ng-template>                
+                <ng-template [ngIf]="getControl['lName'].errors['required']">Last Name is required. </ng-template>
+                <ng-template [ngIf]="getControl['lName'].errors['pattern'] ">Last Name is not valid. Try again. </ng-template>            
               </ng-template>
             </div>           
+          </div>
+          <div class="form-floating mb-3">
+            <input 
+              type="email"
+              formControlName="email" 
+              class="form-control" 
+              [ngClass]="{ 'is-invalid': submitted && getControl.email.errors}"
+              id="email" 
+              placeholder="Email Address"
+              required >
+              <label for="email">Email Address <span class="required">*</span></label>
+              <div class="form-error mb-3 text-danger" aria-live="polite">
+                <ng-template [ngIf]="submitted && getControl.email.errors">
+                  <ng-template [ngIf]="getControl['email'].errors['required']">Email is required</ng-template>
+                  <ng-template [ngIf]="getControl['email'].errors['pattern']">Email is is not valid</ng-template>               
+                </ng-template>
+              </div>               
           </div>
           <div>
             <button class="btn btn-primary" type="submit" >Submit</button>
