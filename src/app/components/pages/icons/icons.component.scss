@@ -12,6 +12,13 @@
 
     }
   }
+  .faIcon{
+    &-info{
+      background-color: blue;
+      color: white;
+      border-radius: 50%;
+    }
+  }
 
   .baIcon{
     &-person {

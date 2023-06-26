@@ -33,6 +33,10 @@ export class SvgIconsModule {
         this.domSanitizer.bypassSecurityTrustResourceUrl(`${this.faPath}/solid/user.svg`)
       )
       .addSvgIcon(
+        'fa_info',
+        this.domSanitizer.bypassSecurityTrustResourceUrl(`${this.faPath}/solid/info.svg`)
+      )      
+      .addSvgIcon(
         'ba_person',
         this.domSanitizer.bypassSecurityTrustResourceUrl(`${this.baPath}/person.svg`)      
       )
