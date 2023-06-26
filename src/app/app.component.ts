@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Title, Meta } from '@angular/platform-browser';
+import { Title, Meta, DomSanitizer } from '@angular/platform-browser';
 import { Router, NavigationEnd, ActivatedRoute } from '@angular/router';
 import { filter, map } from 'rxjs/operators';
+
 
 @Component({
   selector: 'app-root',
@@ -11,7 +12,8 @@ import { filter, map } from 'rxjs/operators';
 })
 export class AppComponent implements OnInit{
 
-
+  private faPath = '../assets/images/icons/fontawesome';
+  private baPath = '../assets/images/icons/bootstrap-icons';
   skipLinkPath: string | undefined;
 
   constructor(
@@ -19,8 +21,10 @@ export class AppComponent implements OnInit{
     private activatedRoute: ActivatedRoute,
     private titleService: Title,
     private metaService: Meta,
-    
-  ) { }
+    private domSanitizer: DomSanitizer,
+  ) { 
+      
+  }
 
 
   ngOnInit() {

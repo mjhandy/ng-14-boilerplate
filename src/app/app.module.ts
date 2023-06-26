@@ -1,8 +1,10 @@
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 import { BrowserModule, Meta } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+
 
 
 import { HeaderComponent } from './components/header/header/header.component';
@@ -17,12 +19,13 @@ import { TwoColumnTemplateSideRailComponent } from './components/pages/two-colum
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AccordionComponent } from './components/pages/accordion/accordion.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatIconComponent } from './components/pages/mat-icon/mat-icon.component';
+
+import { SvgIconsModule } from './svg-icons/svg-icons.module';
 
 
 @NgModule({
   declarations: [
-    AppComponent,
+    AppComponent,    
     HeaderComponent,
     MainNavComponent,
     GlobalSearchComponent,
@@ -34,15 +37,19 @@ import { MatIconComponent } from './components/pages/mat-icon/mat-icon.component
     TwoColumnTemplateSideRailComponent,
     AccordionComponent,
     
+    
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     NgbModule,
     BrowserAnimationsModule,
-    MatIconComponent,
+    SvgIconsModule,
   ],
   providers: [Meta],
-  bootstrap: [AppComponent]
+  bootstrap: [
+    AppComponent,
+  ]
 })
 export class AppModule { }

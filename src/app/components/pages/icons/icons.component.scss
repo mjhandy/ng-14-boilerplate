@@ -1,0 +1,25 @@
+
+.icons{
+  display: flex;
+  flex-flow: row wrap;
+  gap: 10px;
+  .icon{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    
+    &-symbol{
+
+    }
+  }
+
+  .baIcon{
+    &-person {
+      color: red;
+      &:hover{
+        color: blue;
+      }
+    }
+  }
+}
+

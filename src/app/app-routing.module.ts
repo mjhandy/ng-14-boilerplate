@@ -7,7 +7,7 @@ import { HomePageComponent } from './components/pages/home-page/home-page.compon
 import { OneColumnTemplateComponent } from './components/pages/one-column-template/one-column-template.component';
 import { PageNotFoundComponent } from './components/pages/page-not-found/page-not-found.component';
 import { TwoColumnTemplateSideRailComponent } from './components/pages/two-column-template-side-rail/two-column-template-side-rail.component';
-import { MatIconComponent } from './components/pages/mat-icon/mat-icon.component';
+import { IconsComponent } from './components/pages/icons/icons.component';
 
 
 
@@ -48,9 +48,9 @@ const routes: Routes = [
     title: 'Bootsrap Accordion'
   },
   { 
-    path: 'material-components/mat-icon', 
-    component: MatIconComponent,
-    title: 'Mat Icon'
+    path: 'icons', 
+    component: IconsComponent,
+    title: 'Icons'
   },
 
   // Wild card route for 404 page
