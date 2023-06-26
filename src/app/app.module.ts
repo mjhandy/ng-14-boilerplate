@@ -16,6 +16,8 @@ import { OneColumnTemplateComponent } from './components/pages/one-column-templa
 import { TwoColumnTemplateSideRailComponent } from './components/pages/two-column-template-side-rail/two-column-template-side-rail.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AccordionComponent } from './components/pages/accordion/accordion.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatIconComponent } from './components/pages/mat-icon/mat-icon.component';
 
 
 @NgModule({
@@ -31,11 +33,14 @@ import { AccordionComponent } from './components/pages/accordion/accordion.compo
     OneColumnTemplateComponent,
     TwoColumnTemplateSideRailComponent,
     AccordionComponent,
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    BrowserAnimationsModule,
+    MatIconComponent,
   ],
   providers: [Meta],
   bootstrap: [AppComponent]
