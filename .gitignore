@@ -4,3 +4,4 @@
 *.scss.map
 .angular/
 node_modules/*
+dist/*
