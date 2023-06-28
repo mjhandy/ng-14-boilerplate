@@ -24,6 +24,7 @@ export class SvgIconsModule {
     private matIconRegistry: MatIconRegistry,
   ){
     this.matIconRegistry
+      // font awesome
       .addSvgIcon(
         'fa_regular_user',
         this.domSanitizer.bypassSecurityTrustResourceUrl(`${this.faPath}/regular/user.svg`)      
@@ -35,7 +36,20 @@ export class SvgIconsModule {
       .addSvgIcon(
         'fa_info',
         this.domSanitizer.bypassSecurityTrustResourceUrl(`${this.faPath}/solid/info.svg`)
-      )      
+      )
+      .addSvgIcon(
+        'fa_chevron_right',
+        this.domSanitizer.bypassSecurityTrustResourceUrl(`${this.faPath}/solid/chevron-right.svg`)
+      )
+      .addSvgIcon(
+        'fa_forward',
+        this.domSanitizer.bypassSecurityTrustResourceUrl(`${this.faPath}/solid/forward.svg`)
+      )
+      .addSvgIcon(
+        'fa_edit',
+        this.domSanitizer.bypassSecurityTrustResourceUrl(`${this.faPath}/solid/pen.svg`)
+      )          
+      // bootstrap icons      
       .addSvgIcon(
         'ba_person',
         this.domSanitizer.bypassSecurityTrustResourceUrl(`${this.baPath}/person.svg`)      
@@ -43,6 +57,14 @@ export class SvgIconsModule {
       .addSvgIcon(
         'ba_person_fill',
         this.domSanitizer.bypassSecurityTrustResourceUrl(`${this.baPath}/person-fill.svg`)      
-      ) 
+      )
+      .addSvgIcon(
+        'ba_edit',
+        this.domSanitizer.bypassSecurityTrustResourceUrl(`${this.baPath}/pencil.svg`)      
+      )
+      .addSvgIcon(
+        'ba_plus_circle',
+        this.domSanitizer.bypassSecurityTrustResourceUrl(`${this.baPath}/plus-circle.svg`)      
+      )             
   }
 }
