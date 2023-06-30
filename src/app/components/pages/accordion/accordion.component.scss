@@ -1,12 +1,7 @@
 /* Bootstrap Overrides */
 @import 'bootstrapOverrides';
 // Bootstrap required items
-@import "functions";
-@import "variables";
-@import "variables-dark";
-@import "maps";
-@import "mixins";
-@import "utilities";
+@import 'componentInclude';
 // Bootstrap Accordion 
 @import "accordion";
 
