@@ -21,6 +21,7 @@ import { AccordionComponent } from './components/pages/accordion/accordion.compo
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { SvgIconsModule } from './svg-icons/svg-icons.module';
+import { CarouselComponent } from './components/pages/carousel/carousel.component';
 
 
 @NgModule({
@@ -38,6 +39,7 @@ import { SvgIconsModule } from './svg-icons/svg-icons.module';
     AccordionComponent,
     
     
+    
   ],
   imports: [
     BrowserModule,
@@ -46,6 +48,7 @@ import { SvgIconsModule } from './svg-icons/svg-icons.module';
     NgbModule,
     BrowserAnimationsModule,
     SvgIconsModule,
+    CarouselComponent,
   ],
   providers: [Meta],
   bootstrap: [

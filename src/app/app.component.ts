@@ -12,8 +12,7 @@ import { filter, map } from 'rxjs/operators';
 })
 export class AppComponent implements OnInit{
 
-  private faPath = '../assets/images/icons/fontawesome';
-  private baPath = '../assets/images/icons/bootstrap-icons';
+
   skipLinkPath: string | undefined;
 
   constructor(
@@ -21,7 +20,6 @@ export class AppComponent implements OnInit{
     private activatedRoute: ActivatedRoute,
     private titleService: Title,
     private metaService: Meta,
-    private domSanitizer: DomSanitizer,
   ) { 
       
   }
