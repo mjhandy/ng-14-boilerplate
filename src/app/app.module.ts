@@ -17,11 +17,16 @@ import { AboutUsComponent } from './components/pages/about-us/about-us.component
 import { OneColumnTemplateComponent } from './components/pages/one-column-template/one-column-template.component';
 import { TwoColumnTemplateSideRailComponent } from './components/pages/two-column-template-side-rail/two-column-template-side-rail.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { AccordionComponent } from './components/pages/accordion/accordion.component';
+
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { SvgIconsModule } from './svg-icons/svg-icons.module';
+// custom components
 import { CarouselComponent } from './components/pages/carousel/carousel.component';
+import { AccordionComponent } from './components/pages/accordion/accordion.component';
+
+// material items
+import { MaterialModule } from './shared/material/material.module';
+import { SvgIconsModule } from './shared/svg-icons/svg-icons.module';
 
 
 @NgModule({
@@ -37,9 +42,6 @@ import { CarouselComponent } from './components/pages/carousel/carousel.componen
     OneColumnTemplateComponent,
     TwoColumnTemplateSideRailComponent,
     AccordionComponent,
-    
-    
-    
   ],
   imports: [
     BrowserModule,
@@ -49,6 +51,7 @@ import { CarouselComponent } from './components/pages/carousel/carousel.componen
     BrowserAnimationsModule,
     SvgIconsModule,
     CarouselComponent,
+    MaterialModule
   ],
   providers: [Meta],
   bootstrap: [
