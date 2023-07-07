@@ -11,9 +11,6 @@ import { MatIconRegistry } from '@angular/material/icon';
   imports: [
     CommonModule,
     MaterialModule
-  ],
-  bootstrap: [   
-    
   ]
 })
 export class SvgIconsModule { 
