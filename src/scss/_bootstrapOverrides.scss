@@ -6,7 +6,6 @@
 /// @group variables
 
 
-
 $black: #000;
 
 $white: #fff;
@@ -37,11 +36,12 @@ $spacers: ();
 // stylelint-disable-next-line scss/dollar-variable-default
 $spacers: map-merge((0: 0,
         1: ($spacer * 0.5), // 5px
-        2: $spacer, // 10px
+        2: $spacer,         // 10px
         3: ($spacer * 1.5), // 15px
-        4: ($spacer * 2), // 20px
+        4: ($spacer * 2),   // 20px
         5: ($spacer * 2.5), // 25px
-        6: ($spacer * 3) //30px
+        6: ($spacer * 3),   // 30px
+        7: ($spacer * 3.5)  // 35px
     ), $spacers);
 // This variable affects the `.h-*` and `.w-*` classes.
 
@@ -54,10 +54,15 @@ $sizes: map-merge((25: 25%,
         100: 100%,
         auto: auto),
     $sizes);
+    
 // Typography
+$h1-font-size : 3rem;
+$h2-font-size : 2.5rem;
 
-// $font-size-base: 1rem;
 $font-family-sans-serif: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+$font-size-base: 1rem; // this can only have a REM unit, PX will cause an error
 $line-height-base: 1.5;
+
+$link-color: $blue;
 
 /* custom variable values:END */
