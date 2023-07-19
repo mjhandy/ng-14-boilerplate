@@ -2,12 +2,13 @@
 @import 'bootstrapOverrides';
 // Bootstrap required items
 @import 'componentInclude';
-// Bootstrap Accordion 
-@import "accordion";
+@import 'accordion';
 
 // custom CSS
 .accordion{
-  &-prototype{
-    background-color: $black;
+  &-button{
+    &:not(.collapsed){
+      background-color: $silver;
+    }
   }
 }
