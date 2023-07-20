@@ -26,6 +26,7 @@ import { AccordionComponent } from './components/pages/accordion/accordion.compo
 // material items
 import { MaterialModule } from './shared/material/material.module';
 import { SvgIconsModule } from './shared/svg-icons/svg-icons.module';
+import { FormsComponent } from './components/pages/forms/forms.component';
 
 
 @NgModule({
@@ -41,6 +42,7 @@ import { SvgIconsModule } from './shared/svg-icons/svg-icons.module';
     OneColumnTemplateComponent,
     TwoColumnTemplateSideRailComponent,
     AccordionComponent,
+    FormsComponent,
   ],
   imports: [
     BrowserModule,

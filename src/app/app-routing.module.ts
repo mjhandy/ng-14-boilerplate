@@ -10,6 +10,7 @@ import { TwoColumnTemplateSideRailComponent } from './components/pages/two-colum
 
 import { AccordionComponent } from './components/pages/accordion/accordion.component';
 import { CarouselComponent } from './components/pages/carousel/carousel.component';
+import { FormsComponent } from './components/pages/forms/forms.component';
 
 import { IconsComponent } from './components/pages/icons/icons.component';
 
@@ -55,7 +56,12 @@ const routes: Routes = [
     path: 'bs-components/carousel', 
     component: CarouselComponent,
     title: 'Bootstrap Carousel'
-  },  
+  },
+  { 
+    path: 'bs-components/forms', 
+    component: FormsComponent,
+    title: 'Bootstrap Forms'
+  },   
   { 
     path: 'icons', 
     component: IconsComponent,
