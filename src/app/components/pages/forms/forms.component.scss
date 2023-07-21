@@ -4,3 +4,19 @@
 @import 'componentInclude';
 @import 'forms';
 @import 'buttons';
+
+form{
+  // error status
+  .ng-touched{
+    &.ng-invalid{
+      border-color: $form-feedback-invalid-color;
+    }   
+  }
+  .error{
+    margin-top: $form-feedback-margin-top;
+    font-size: $form-text-font-size;
+    color: $form-feedback-invalid-color;
+    min-height: 20px;
+    padding: 0 10px;
+  }
+}

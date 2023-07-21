@@ -10,10 +10,14 @@ $black: #000;
 
 $white: #fff;
 $blue: #1057A2;
-$red: red;
+$red: #b90202;
 $silver: #cdcdcd;
 $grey :#767676;
 $platinum: #E5E4E2;
+
+// bootstrap color variabks
+$danger: $red;
+
 /// Default colour for borders
 $borderColour: lighten($grey, 10);
 
@@ -68,4 +72,10 @@ $link-color: $blue;
 //accordion
 $accordion-bg: $white;
 $accordion-active-bg: $silver;
+
+// form items
+$form-text-margin-top: 0;
+$form-text-font-size: 14px;
+$form-feedback-invalid-color: $danger;
+
 /* custom variable values:END */
