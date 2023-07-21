@@ -9,8 +9,16 @@ import { ReactiveFormsModule, FormsModule, FormGroup, FormBuilder, FormControl, 
 export class FormsComponent {
 
   form = new FormGroup({
-    fName: new FormControl('', [Validators.required, Validators.minLength(3)]),
-    email: new FormControl('', [Validators.required, Validators.email])
+    fName: new FormControl('', 
+      [
+        Validators.required, 
+        Validators.minLength(3)
+      ]),
+    email: new FormControl('', 
+      [
+        Validators.required, 
+        Validators.email
+      ])
   });
 
 
