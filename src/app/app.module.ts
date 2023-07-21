@@ -29,6 +29,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './shared/material/material.module';
 import { SvgIconsModule } from './shared/svg-icons/svg-icons.module';
 import { FormsComponent } from './components/pages/forms/forms.component';
+import { NameValidationDirective } from './shared/directives/name-validation.directive';
 
 
 @NgModule({
@@ -45,6 +46,7 @@ import { FormsComponent } from './components/pages/forms/forms.component';
     TwoColumnTemplateSideRailComponent,
     AccordionComponent,
     FormsComponent,
+    NameValidationDirective,
   ],
   imports: [
     BrowserModule,
