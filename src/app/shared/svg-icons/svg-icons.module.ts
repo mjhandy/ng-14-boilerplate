@@ -14,8 +14,8 @@ import { MatIconRegistry } from '@angular/material/icon';
   ]
 })
 export class SvgIconsModule { 
-  private faPath = '../../assets/images/icons/fontawesome';
-  private baPath = '../../assets/images/icons/bootstrap-icons';
+  private faPath = '/assets/images/icons/fontawesome';
+  private baPath = '/assets/images/icons/bootstrap-icons';
 
   constructor(
     private domSanitizer: DomSanitizer,
